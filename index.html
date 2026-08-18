@@ -73,17 +73,17 @@
     mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.03) 7%,rgba(0,0,0,.10) 11%,rgba(0,0,0,.25) 17%,rgba(0,0,0,.50) 23%,rgba(0,0,0,.75) 28%,#000 34%);
   }
   .hero-overlay{position:absolute;inset:0;display:flex;align-items:flex-start;z-index:2;}
-  .hero-inner{max-width:1200px;margin:0;padding:36px 28px 0;width:100%;}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.08em;color:var(--green);background:var(--green-light);border:1px solid var(--line);padding:8px 14px;border-radius:100px;margin-bottom:14px;}
-  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--green);}
-  .hero-copy{max-width:560px;}
-  .hero-copy h1{font-size:clamp(24px,6.2vw,66px);margin:0 0 12px;}
+  .hero-inner{max-width:1200px;margin:0;padding:26px 28px 0;width:100%;}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:0.08em;color:var(--green);background:var(--green-light);border:1px solid var(--line);padding:10px 18px;border-radius:100px;margin-bottom:22px;}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--green);}
+  .hero-copy{max-width:clamp(300px,44vw,540px);}
+  .hero-copy h1{font-size:clamp(26px,4.6vw,68px);margin:0 0 20px;line-height:1.12;}
   .hero-copy h1 span{display:block;white-space:nowrap;}
   .hero-copy h1 .t-navy{color:var(--navy);}
   .hero-copy h1 .t-green{color:var(--green);}
-  .hero-copy p.lead{font-size:18px;color:var(--text-gray);max-width:480px;margin:0 0 18px;}
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px;}
-  .hero .btn{background:var(--green);padding:14px 28px;font-size:15.5px;}
+  .hero-copy p.lead{font-size:clamp(15px,1.6vw,20.5px);color:var(--text-gray);max-width:100%;margin:0 0 28px;line-height:1.5;}
+  .hero-ctas{display:flex;gap:18px;flex-wrap:wrap;margin-top:6px;}
+  .hero .btn{background:var(--green);padding:18px 36px;font-size:17.5px;}
   .hero .btn:hover{background:var(--green);filter:brightness(0.94);}
   .hero .btn-ghost{background:var(--white);color:var(--navy);border:1px solid var(--navy);}
   .hero .btn-ghost:hover{background:var(--green-light);border-color:var(--green);color:var(--green);}
@@ -263,7 +263,7 @@
     <div class="hero-inner">
       <div class="hero-copy">
         <div class="eyebrow"><span class="dot"></span> ACCOUNTING FOR THE TRUCKING INDUSTRY</div>
-        <h1><span class="t-navy">Better Numbers.</span><span class="t-green">A Stronger Tomorrow.</span></h1>
+        <h1><span class="t-navy">Better Numbers.</span><span class="t-green">A Stronger<br>Tomorrow.</span></h1>
         <p class="lead">Bookkeeping, tax support and financial solutions built specifically for carrier companies.</p>
         <div class="hero-ctas">
           <a href="#contact" class="btn">Book a Free Consult <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
