@@ -242,6 +242,29 @@
   .map-embed iframe{display:block;width:100%;height:340px;border:0;}
   @media (max-width:600px){.map-embed iframe{height:260px;}}
 
+  /* DEPARTMENT CASES */
+  .cases{padding:64px 0;background:var(--offwhite);border-top:1px solid var(--line);}
+  .cases-list{max-width:860px;margin:0 auto;}
+  .dept-item{border:1px solid var(--line);border-radius:14px;background:var(--white);margin-bottom:14px;overflow:hidden;}
+  .dept-item summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;cursor:pointer;}
+  .dept-item summary::-webkit-details-marker{display:none;}
+  .dept-item summary .dept-name{display:block;font-family:'Oswald',sans-serif;font-size:17px;letter-spacing:0.02em;text-transform:uppercase;color:var(--navy);}
+  .dept-item summary .dept-sub{display:block;font-size:13px;font-weight:400;color:var(--text-gray);margin-top:3px;}
+  .dept-item summary .plus{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--green);font-size:18px;transition:.15s;}
+  .dept-item[open] summary .plus{transform:rotate(45deg);background:var(--green-light);border-color:var(--green);}
+  .case-list{list-style:none;padding:0 24px 20px;}
+  .case-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;padding:12px 0;border-top:1px dashed var(--line);font-size:14px;}
+  .case-num{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-gray);flex-shrink:0;width:18px;}
+  .case-problem{color:var(--text-gray);flex:1 1 220px;}
+  .case-arrow{color:var(--green);font-weight:700;flex-shrink:0;}
+  .case-result{color:var(--navy);font-weight:600;flex:1 1 220px;}
+  @media (max-width:560px){
+    .case-row{gap:4px;}
+    .case-num{width:auto;}
+    .case-arrow{display:none;}
+    .case-result::before{content:'→ ';color:var(--green);}
+  }
+
   footer{padding:40px 0 28px;background:#021A35;font-size:13px;color:rgba(255,255,255,0.65);}
   .footer-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;margin-bottom:24px;}
   .footer-links{display:flex;flex-wrap:wrap;gap:22px;list-style:none;}
@@ -551,6 +574,88 @@
   </div>
 </section>
 
+<section class="cases" id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How each team actually handles your books.</h2>
+      <p>Five real-world example scenarios per department, so a new client knows exactly what to expect. Illustrative examples — not real client data.</p>
+    </div>
+    <div class="cases-list">
+
+      <details class="dept-item" open>
+        <summary>
+          <div><span class="dept-name">Accounts Payable</span><span class="dept-sub">Vendor bills, fuel cards, insurance premiums — paid right, on time.</span></div>
+          <span class="plus">+</span>
+        </summary>
+        <ul class="case-list">
+          <li class="case-row"><span class="case-num">01</span><span class="case-problem">Fuel-card vendor billed the same week twice</span><span class="case-arrow">→</span><span class="case-result">Caught before payment, saving $1,180</span></li>
+          <li class="case-row"><span class="case-num">02</span><span class="case-problem">Insurance renewal date almost missed ahead of a DOT audit</span><span class="case-arrow">→</span><span class="case-result">Reconciled and paid early, no lapse in coverage</span></li>
+          <li class="case-row"><span class="case-num">03</span><span class="case-problem">Parts vendor statement didn't match three invoices</span><span class="case-arrow">→</span><span class="case-result">Resolved and renegotiated to net-30 terms</span></li>
+          <li class="case-row"><span class="case-num">04</span><span class="case-problem">Trailer lease payment miscoded to the wrong truck</span><span class="case-arrow">→</span><span class="case-result">Reassigned so per-unit costs stayed accurate</span></li>
+          <li class="case-row"><span class="case-num">05</span><span class="case-problem">Vendor missing a W-9 heading into year-end</span><span class="case-arrow">→</span><span class="case-result">Collected and 1099 filed on time</span></li>
+        </ul>
+      </details>
+
+      <details class="dept-item">
+        <summary>
+          <div><span class="dept-name">Accounts Receivable</span><span class="dept-sub">Broker invoices and factoring pay-outs, chased down and reconciled.</span></div>
+          <span class="plus">+</span>
+        </summary>
+        <ul class="case-list">
+          <li class="case-row"><span class="case-num">01</span><span class="case-problem">Broker sat 45 days past due on three loads</span><span class="case-arrow">→</span><span class="case-result">Followed up and collected in full within a week</span></li>
+          <li class="case-row"><span class="case-num">02</span><span class="case-problem">Factoring company shorted a payout by $310</span><span class="case-arrow">→</span><span class="case-result">Caught the discrepancy and got it corrected</span></li>
+          <li class="case-row"><span class="case-num">03</span><span class="case-problem">Customer disputed a detention charge</span><span class="case-arrow">→</span><span class="case-result">Pulled the load paperwork, resolved same day</span></li>
+          <li class="case-row"><span class="case-num">04</span><span class="case-problem">One broker consistently paying late on the aging report</span><span class="case-arrow">→</span><span class="case-result">Flagged before it became a cash-flow problem</span></li>
+          <li class="case-row"><span class="case-num">05</span><span class="case-problem">Invoice about to go out at the wrong rate confirmation</span><span class="case-arrow">→</span><span class="case-result">Caught before sending, avoiding a short payment</span></li>
+        </ul>
+      </details>
+
+      <details class="dept-item">
+        <summary>
+          <div><span class="dept-name">Bookkeeping</span><span class="dept-sub">Monthly books kept clean, categorized, and matched to the bank.</span></div>
+          <span class="plus">+</span>
+        </summary>
+        <ul class="case-list">
+          <li class="case-row"><span class="case-num">01</span><span class="case-problem">Fuel purchases mis-categorized as maintenance for two months</span><span class="case-arrow">→</span><span class="case-result">Reclassified and margins corrected</span></li>
+          <li class="case-row"><span class="case-num">02</span><span class="case-problem">Owner-operator draws mixed into business expenses</span><span class="case-arrow">→</span><span class="case-result">Separated out for a true P&amp;L</span></li>
+          <li class="case-row"><span class="case-num">03</span><span class="case-problem">A quarter of fuel receipts were missing before tax season</span><span class="case-arrow">→</span><span class="case-result">Rebuilt from card statements in time to file</span></li>
+          <li class="case-row"><span class="case-num">04</span><span class="case-problem">Two bank accounts hadn't been reconciled in six months</span><span class="case-arrow">→</span><span class="case-result">Caught up and matched to the penny</span></li>
+          <li class="case-row"><span class="case-num">05</span><span class="case-problem">New trailer booked as an expense instead of an asset</span><span class="case-arrow">→</span><span class="case-result">Corrected for accurate depreciation</span></li>
+        </ul>
+      </details>
+
+      <details class="dept-item">
+        <summary>
+          <div><span class="dept-name">Audit</span><span class="dept-sub">A second set of eyes before small errors become expensive ones.</span></div>
+          <span class="plus">+</span>
+        </summary>
+        <ul class="case-list">
+          <li class="case-row"><span class="case-num">01</span><span class="case-problem">Year-end review found a $2,400 double-counted expense</span><span class="case-arrow">→</span><span class="case-result">Corrected before the tax return was filed</span></li>
+          <li class="case-row"><span class="case-num">02</span><span class="case-problem">IFTA mileage logs didn't match ELD records</span><span class="case-arrow">→</span><span class="case-result">Reconciled ahead of the quarterly filing</span></li>
+          <li class="case-row"><span class="case-num">03</span><span class="case-problem">Random invoice sampling flagged a recurring overcharge</span><span class="case-arrow">→</span><span class="case-result">Vendor pricing corrected on the next order</span></li>
+          <li class="case-row"><span class="case-num">04</span><span class="case-problem">Payroll audit found a driver misclassified for overtime</span><span class="case-arrow">→</span><span class="case-result">Corrected before it triggered a penalty</span></li>
+          <li class="case-row"><span class="case-num">05</span><span class="case-problem">Pre-DOT-audit review found incomplete maintenance records</span><span class="case-arrow">→</span><span class="case-result">Resolved before the inspection date</span></li>
+        </ul>
+      </details>
+
+      <details class="dept-item">
+        <summary>
+          <div><span class="dept-name">Planner</span><span class="dept-sub">Forecasts and decisions modeled out before you commit.</span></div>
+          <span class="plus">+</span>
+        </summary>
+        <ul class="case-list">
+          <li class="case-row"><span class="case-num">01</span><span class="case-problem">Weighing whether to add two trucks to the fleet</span><span class="case-arrow">→</span><span class="case-result">Modeled the cost, showed break-even at month 5</span></li>
+          <li class="case-row"><span class="case-num">02</span><span class="case-problem">A seasonal freight slowdown was approaching</span><span class="case-arrow">→</span><span class="case-result">12-month cash flow forecast avoided a cash crunch</span></li>
+          <li class="case-row"><span class="case-num">03</span><span class="case-problem">Deciding whether to lease or buy a new trailer</span><span class="case-arrow">→</span><span class="case-result">Buying saved $6,200 over three years</span></li>
+          <li class="case-row"><span class="case-num">04</span><span class="case-problem">A strong year risked a surprise tax bill</span><span class="case-arrow">→</span><span class="case-result">Quarterly estimates set to match actual income</span></li>
+          <li class="case-row"><span class="case-num">05</span><span class="case-problem">Owner-operator planning a move to a two-truck fleet</span><span class="case-arrow">→</span><span class="case-result">Mapped out insurance and payroll setup in advance</span></li>
+        </ul>
+      </details>
+
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="footer-top">
@@ -584,7 +689,7 @@
       });
     }
 
-    var revealTargets = document.querySelectorAll('.section-head, .svc-card, .tool-badge, .reports-grid > div, .story-grid > div, .settlement-grid > div, .price-table, .faq-item, .cta-inner, .map-embed');
+    var revealTargets = document.querySelectorAll('.section-head, .svc-card, .tool-badge, .reports-grid > div, .story-grid > div, .settlement-grid > div, .price-table, .faq-item, .cta-inner, .map-embed, .dept-item');
     revealTargets.forEach(function(el){ el.classList.add('reveal'); });
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function(entries){
